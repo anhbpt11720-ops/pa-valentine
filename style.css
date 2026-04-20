@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  background: radial-gradient(circle, #FFE4E8, #ffc0cb);
+  overflow: hidden;
+}
+
+.title {
+  margin-top: 40px;
+  font-size: 32px;
+  animation: wiggle 1s infinite;
+}
+
+@keyframes wiggle {
+  0%,100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+.gif {
+  width: 220px;
+  margin: 20px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#yesBtn {
+  background: #4CAF50;
+  color: white;
+  font-size: 20px;
+}
+
+#noBtn {
+  background: #ff4d6d;
+  color: white;
+}
+
+#musicToggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.toast {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  display: none;
+}
+
+.yes-title {
+  margin-top: 50px;
+  font-size: 40px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.love-text {
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+/* Hearts animation */
+.hearts::before {
+  content: "💖 💕 💗 💘 💝";
+  position: absolute;
+  width: 100%;
+  bottom: -50px;
+  animation: floatUp 10s linear infinite;
+  font-size: 30px;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100vh); }
+}
