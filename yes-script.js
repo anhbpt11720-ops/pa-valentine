@@ -12,7 +12,12 @@ function startMusicOnce() {
   }
 }
 
-document.addEventListener("click", startMusicOnce);
+// Thử phát ngay khi load, nếu browser chặn thì chờ click đầu tiên
+music.play().then(() => {
+  musicStarted = true;
+}).catch(() => {
+  document.addEventListener("click", startMusicOnce, { once: true });
+});
 
 toggle.onclick = () => {
   if (music.paused) music.play();
